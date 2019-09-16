@@ -4,8 +4,6 @@ body {
 
 .App {
   text-align: center;
-  padding-left: 30px;
-  background: green;
 }
 
 @keyframes App-logo-spin {

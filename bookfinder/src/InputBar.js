@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Button } from "semantic-ui-react";
 
 export default function InputBar(props) {
   const [searchTerm, updateSearchTerm] = useState("");
@@ -10,30 +11,23 @@ export default function InputBar(props) {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "5%" }}>
       <h1 style={{ color: "#a1a1a1" }}> Book Finder </h1>
       <input
         onChange={e => {
           updateState(e);
         }}
         type="text"
-        style={{ width: "300px", height: "20px" }}
+        style={{ width: "300px", height: "35px" }}
       ></input>
-      <button
+      <Button
+        color="teal"
         onClick={e => {
           props.getBooks(searchTerm);
         }}
-        style={{
-          background: "#00d17a",
-          height: "26px",
-          width: "100px",
-          color: "white",
-          fontWeight: "bold",
-          borderColor: "#00d17a"
-        }}
       >
         Search
-      </button>
+      </Button>
     </div>
   );
 }

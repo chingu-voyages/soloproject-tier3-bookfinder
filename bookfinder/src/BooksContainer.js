@@ -5,9 +5,13 @@ export default function BooksContainer(props) {
   return (
     <div
       style={{
-        marginTop: "5%",
         display: "grid",
-        gridTemplateColumns: "auto auto"
+        gridTemplateColumns: "auto auto",
+        marginTop: "6%",
+        textAlign: "center",
+        justifyItems: "center",
+        paddingLeft: "15%",
+        paddingRight: "15%"
       }}
     >
       {props.books.map((ele, ind) => {
